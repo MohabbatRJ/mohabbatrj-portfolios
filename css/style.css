@@ -1,0 +1,761 @@
+@import url('https://fonts.googleapis.com/css2?family=Sniglet&display=swap');
+
+@font-face {
+    font-family: "unfolding";
+    src: url("../fonts/Unfolding.ttf");
+}
+
+/* global css  */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--myFont);
+}
+
+:root {
+    --myFont: "Sniglet";
+    --dark: #2e424d;
+    --light: rgb(233, 234, 236);
+    --grey: #5b8291;
+    --cyan: #98dad9;
+}
+
+body {
+    background-color: var(--dark);
+    color: var(--light);
+    /* font-family: sans-serif; */
+}
+
+html {
+    font-size: 20px;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    /* color: var(--light); */
+}
+
+.max-width {
+    max-width: 1400px;
+}
+
+h1, h2, h3, h4, h5, h6, span, p {
+    letter-spacing: 0.1rem;
+}
+
+.heading1 {
+    font-size: 4rem;
+}
+
+.heading2 {
+    font-size: 3.5rem;
+}
+
+.heading3 {
+    font-size: 2.5rem;
+}
+
+.heading4 {
+    font-size: 2rem;
+}
+
+.heading5 {
+    font-size: 1.5rem;
+}
+
+.heading6 {
+    font-size: 1.2rem;
+}
+
+.paragraph {
+    font-size: 0.8rem;
+}
+
+.myBtn {
+    padding: 5px 20px;
+    border: none;
+    outline: none;
+    border-radius: 25px;
+    background-color: var(--cyan);
+    color: var(--dark);
+    font-size: 0.8rem;
+    font-weight: bold;
+    letter-spacing: 0.2rem;
+    text-align: center;
+    transition: all linear 0.4s;
+}
+
+.myBtn:hover {
+    background-color: var(--grey);
+    color: var(--cyan);
+    cursor: pointer;
+}
+
+.textUpperShadow {
+    text-shadow: -0px 10px 3px var(--grey);
+}
+
+.textUpperShadow:hover {
+    text-shadow: -0px -10px 2px var(--grey);
+    transition: all 0.2s ease-in-out;
+}
+
+/* global css end */
+
+
+/* navbar start  */
+.navbarBG {
+    background-color: rgba(46, 66, 77, 0.8);
+    backdrop-filter: blur(5px);
+    box-shadow: 0 20px 50px rgba(152, 218, 217, 1);
+}
+
+.navbar-brand {
+    color: var(--cyan);
+    transition: color 0.4s ease-in-out;
+}
+
+.navbar-brand:hover {
+    color: var(--light);
+}
+
+.navbar-brand:hover .nameInitailLast {
+    color: var(--cyan);
+    transition: color 0.4s ease-in-out;
+}
+
+
+
+.nameInitailFirst {
+    color: var(--cyan);
+}
+
+.nameInitailLast {
+    color: var(--light);
+}
+
+.menuIcon {
+    border: 1px solid var(--grey);
+    padding: 0.1rem;
+    border-radius: 1rem;
+    object-fit: cover;
+}
+
+.nav-link {
+    color: var(--light);
+    /* border-bottom: 0px solid transparent; */
+    /* transition: all 4s ease-in; */
+}
+
+.nav-link:active .nav-link:focus {
+    color: var(--cyan) !important;
+}
+
+.nav-link:after {
+    content: '';
+    display: block;
+    height: 1px;
+    width: 0;
+    background: transparent;
+    transition: width .5s ease, background-color .5s ease;
+
+}
+
+.nav-link:hover {
+    color: var(--cyan);
+}
+
+.nav-link:hover::after {
+    width: 100%;
+    background: var(--cyan);
+}
+
+.myBtn:hover .svgFilter {
+    filter: brightness(0) saturate(100%) invert(80%) sepia(37%) saturate(267%) hue-rotate(130deg) brightness(97%) contrast(87%);
+    transition: all linear 0.4s;
+}
+
+/* navbar end  */
+
+
+
+/* banner start  */
+.bannerMain {
+    background: url('../images/BannerBG.webp'), linear-gradient(rgba(46, 66, 77, 1), rgba(46, 66, 77, 1));
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    background-blend-mode: overlay;
+}
+
+/* bannerHead  */
+.bannerMain .bannerHead p {
+    font-size: 2rem;
+    color: var(--light);
+}
+
+/* banner social link | footer social links */
+.bannerMain .socialLink a {
+    border: 2px solid var(--cyan);
+    border-radius: 50%;
+    padding: 5px;
+    transition: transform 0.4s ease;
+}
+
+.bannerMain .socialLink:hover a, .footerMain .socialLink:hover a {
+    background-color: var(--grey);
+    transform: scale(1.4);
+    /* filter: invert(0.5) sepia(1) hue-rotate(200deg) saturate(4) brightness(1); */
+}
+
+/* banner end  */
+
+
+
+/* about start */
+.aboutMain {
+    background-color: var(--dark);
+    color: var(--cyan);
+}
+
+/* about headings, full detail heading */
+.aboutMain .heading3, .aboutMain .fullDetail .heading6 {
+    color: var(--light);
+}
+
+.aboutHead .heading6 {
+    border-bottom: 1px solid var(--grey);
+}
+
+.aboutMain .aboutContent {
+    border-bottom: 5px solid var(--cyan);
+}
+
+/* my image  */
+.aboutMain .myImage {
+    filter: brightness(120%);
+}
+
+/* full detail list */
+.aboutMain .detail ul li::before {
+    content: '❱';
+    color: var(--grey);
+    font-size: larger;
+}
+
+.aboutMain .detail span {
+    font-weight: 600;
+    color: var(--light);
+}
+
+.aboutMain .detail ul li {
+    font-size: 0.8rem;
+}
+
+.aboutMain .detail .phone, .aboutMain .detail .age {
+    color: var(--cyan);
+    font-size: 0.7rem;
+}
+
+.aboutMain .detail a {
+    text-decoration: none;
+    color: var(--cyan);
+}
+
+.aboutMain .detail a:hover {
+    color: var(--light);
+}
+
+/* journey */
+.journeyHead .heading6 {
+    border-bottom: 1px solid var(--grey);
+}
+
+.counts .aboutCount {
+    padding: 30px 30px 25px 30px;
+    margin: 25px auto;
+    width: 100%;
+    position: relative;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.08);
+    transition: scale 0.2s ease;
+}
+
+.aboutCount:hover {
+    scale: 1.1;
+}
+
+.counts .aboutCount img {
+    position: absolute;
+    top: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 24px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 12px;
+    color: #18d26e;
+    border-radius: 50px;
+    line-height: 0;
+
+}
+
+.aboutCount span {
+    font-size: 36px;
+    display: block;
+    font-weight: 600;
+    color: #fff;
+    z-index: 999;
+}
+
+/* client slider */
+.slider {
+    position: relative;
+}
+
+.sliderHead .heading6 {
+    border-bottom: 1px solid var(--grey);
+}
+
+.swiper {
+    width: 100%;
+    /* height: 300px; */
+    /* position: relative; */
+}
+
+/* client slider button */
+.swiper-button-next {
+    position: absolute;
+    top: 1rem;
+    right: 0.3rem;
+    color: var(--black);
+}
+
+.swiper-button-prev {
+    position: absolute;
+    top: 1rem;
+    right: 2rem !important;
+    left: auto;
+    color: var(--black);
+}
+
+.swiper-button-next:after, .swiper-button-prev:after {
+    font-size: 0.8rem !important;
+}
+
+/* .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+} */
+
+/* slide */
+.clientItem {
+    box-sizing: content-box;
+    min-height: 320px;
+    transition: scale 0.2s ease;
+}
+
+.clientItem:hover {
+    scale: 1.05;
+}
+
+.clientItem .paragraph {
+    font-style: italic;
+    margin: 0 15px 0 15px;
+    padding: 20px 20px 60px 20px;
+    background: rgba(255, 255, 255, 0.1);
+    position: relative;
+    border-radius: 6px;
+    z-index: 1;
+}
+
+.clientItem .heading6 {
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: var(--light);
+}
+
+.clientItem .clientDes {
+    font-size: 0.7rem;
+}
+
+.clientImg {
+    /* width: 90px; */
+    border-radius: 50%;
+    margin: -40px 0 0 40px;
+    padding: 0.2rem;
+    background-color: var(--dark);
+    position: relative;
+    z-index: 2;
+    border: 6px solid rgba(255, 255, 255, 0.12);
+}
+
+/* about end */
+
+
+/* skills start  */
+
+.skillsMain {
+    background: url('../images/skillsBg.webp'), linear-gradient(rgba(46, 66, 77, 0.8), rgba(46, 66, 77, 1));
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    background-blend-mode: color-burn;
+}
+
+/* skill */
+.skillsMain .progress {
+    height: 60px;
+    display: block;
+    background: none;
+    border-radius: 0;
+}
+
+.skillsMain .progress .skill {
+    padding: 10px 0;
+    margin: 0;
+    text-transform: uppercase;
+    display: block;
+    font-weight: 600;
+    color: var(--light);
+}
+
+.skillsMain .progressBarWrap {
+    background: var(--grey);
+}
+
+.skillsMain .progress-bar {
+    width: 1px;
+    height: 10px;
+    transition: 0.9s;
+    background-color: var(--cyan);
+}
+
+/* skills end  */
+
+/* portfolio start  */
+.portfolioMain {
+    background-color: var(--grey);
+}
+
+.portfolioMain .heading6 {
+    color: var(--cyan);
+}
+
+.portfolioHead .heading6 {
+    border-bottom: 1px solid var(--light);
+}
+
+.portfolioMain .portfolioItem {
+    margin-bottom: 30px;
+}
+
+.portfolioMain .portfolioWrap {
+    transition: 0.3s;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.portfolioMain .portfolioWrap::before {
+    content: "";
+    background: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    left: 30px;
+    right: 30px;
+    top: 30px;
+    bottom: 30px;
+    transition: all ease-in-out 0.3s;
+    z-index: 2;
+    opacity: 0;
+}
+
+.portfolioMain .portfolioWrap .portfolioInfo span {
+    font-size: 0.7rem;
+}
+
+.portfolioMain .portfolioWrap .portfolioInfo {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    text-align: center;
+    z-index: 3;
+    transition: all ease-in-out 0.3s;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.portfolioMain .portfolioWrap .portfolioInfo::before {
+    display: block;
+    content: "";
+    width: 48px;
+    height: 48px;
+    position: absolute;
+    top: 35px;
+    left: 35px;
+    border-top: 3px solid var(--cyan);
+    border-left: 3px solid var(--cyan);
+    transition: all 0.5s ease 0s;
+    z-index: 9994;
+}
+
+.portfolioMain .portfolioWrap .portfolioInfo::after {
+    display: block;
+    content: "";
+    width: 48px;
+    height: 48px;
+    position: absolute;
+    bottom: 35px;
+    right: 35px;
+    border-bottom: 3px solid var(--cyan);
+    border-right: 3px solid var(--cyan);
+    transition: all 0.5s ease 0s;
+    z-index: 9994;
+}
+
+.portfolioMain .portfolioWrap:hover::before {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 1;
+}
+
+.portfolioWrap>img {
+    filter: brightness(50%);
+    width: 300px;
+    height: 250px;
+    object-fit: fill;
+}
+
+.portfolioMain .portfolioWrap:hover .portfolioInfo {
+    opacity: 1;
+}
+
+.portfolioMain .portfolioWrap:hover .portfolioInfo::before {
+    top: 15px;
+    left: 15px;
+}
+
+.portfolioMain .portfolioWrap:hover .portfolioInfo::after {
+    bottom: 15px;
+    right: 15px;
+}
+
+.portfolioMain .portfolioWrap .portfolioLinks a:hover {
+    filter: brightness(150%);
+}
+
+.portfolioMain .portfolio-links .portfolio-lighbox {
+    height: 50%;
+}
+
+/* owl slider */
+.owl-theme .owl-dots .owl-dot span {
+    width: 12px;
+    height: 12px;
+    background: var(--cyan);
+    border: 0px solid var(--cyan);
+    display: block;
+    transition: all 0.6s ease-in-out;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.owl-theme .owl-dots .owl-dot:hover span {
+    background: var(--dark);
+}
+
+.owl-theme .owl-dots .owl-dot.active span {
+    background-color: var(--light);
+}
+
+/* portfolio end  */
+
+
+/* portfolio full start */
+.portfolioFullMain {
+    background-color: var(--cyan);
+}
+
+.portfolioFullMain .heading3 {
+    color: var(--dark);
+}
+
+.portfolioFullMain #portfolioAllImages img {
+    max-width: 99%;
+    object-fit: fill;
+    margin: auto;
+    border-radius: 10px;
+}
+
+/* portfolio end */
+
+/* contact start */
+.contactMain {
+    background-color: var(--dark);
+}
+
+.contactMain .heading6 {
+    color: var(--cyan);
+    border-bottom: 1px solid var(--grey);
+}
+
+
+.contactMain label {
+    color: var(--light);
+}
+
+.contactMain input, .contactMain textarea {
+    background-color: var(--light);
+    caret-color: var(--dark);
+}
+
+.contactMain input::placeholder {
+    color: var(--dark);
+    font-size: 0.8rem;
+}
+
+.contactMain input:focus, .contactMain textarea:focus {
+    /* color: var(--cyan); */
+    /* font-size: 0.8rem; */
+    background-color: var(--light);
+}
+
+.contactMain .btn-send {
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    width: 80%;
+    margin-left: 3px;
+}
+
+.contactMain .help-block.with-errors {
+    color: #ff5050;
+    margin-top: 5px;
+
+}
+
+.contactMain .card {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+/* contact end */
+
+/* footer credit start */
+.footerMain {
+    background-color: var(--dark);
+    color: var(--light);
+    font-size: 0.8rem;
+}
+
+.footerMain .socialLink a {
+    transition: transform 0.4s ease;
+}
+
+/* footer credit end */
+
+
+/* for responsive  */
+
+@media only screen and (max-width: 1370px) {
+    html {
+        font-size: 1.5rem;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    html {
+        font-size: 1.3rem;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    html {
+        font-size: 1.1rem;
+    }
+
+    .textUpperShadow {
+        text-shadow: none;
+    }
+}
+
+/* li.nav-item {
+    position: relative;
+    font-size: 4rem;
+}
+
+.resNav {
+    display: none;
+    font-size: 4rem;
+} */
+
+@media only screen and (max-width: 576px) {
+    html {
+        font-size: 1.5rem;
+    }
+
+    .navbarBG {
+        background-color: var(--grey);
+    }
+
+    .navbar-brand, .nav-link {
+        color: var(--light);
+        /* z-index: 99999; */
+    }
+
+    /* #navbar .navbar-brand .nav-item .textUpperShadow {
+        text-shadow:  0px 0px 0px var(--cyan);
+        color: transparent;
+        z-index: -88888888;
+    } */
+
+    /* li.nav-item:hover .resNav { */
+        /* display: block; */
+        /* text-shadow: -0px 10px 3px var(--dark); */
+        /* position: absolute; */
+        /* color: transparent; */
+        /* font-size: 120%; */
+        /* left: -120%; */
+        /* top: -120%; */
+        /* z-index: -9999; */
+        /* text-shadow: -.1em .15em .15em black; */
+    /* }  */
+
+
+    .navbar-brand:hover, .nameInitailLast {
+        color: var(--cyan);
+    }
+
+    .navbar-brand:hover .nameInitailLast {
+        color: var(--light);
+    }
+
+    #banner .name .paragraph {
+        font-size: 0.9rem;
+    }
+
+}
+
+@media only screen and (max-width: 400px) {
+
+
+    .skillsMain .progress-bar {
+        display: none;
+    }
+}
