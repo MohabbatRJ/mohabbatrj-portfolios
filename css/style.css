@@ -718,6 +718,13 @@ h1, h2, h3, h4, h5, h6, span, p {
         color: var(--light);
         /* z-index: 99999; */
     }
+    #navbar .navbar-brand span {
+        font-size: 0.8rem;
+    }
+
+    #navbar .navbar-brand button img{
+        width: 25px;
+    }
 
     #navbar .navbar-brand span {
         font-size: 0.7rem;
@@ -757,6 +764,7 @@ h1, h2, h3, h4, h5, h6, span, p {
     #banner .name .paragraph {
         font-size: 0.9rem;
     }
+    
 
 }
 
